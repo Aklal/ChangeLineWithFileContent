@@ -6,7 +6,7 @@ function replaceTextWithFile() {
     local originalFile="./file.txt"
 
     # Regex to find the line to change
-    local regex="<iframe src=\"(https:\/\/foo.*)\" frameborder"
+    local regex="<iframe src=\"(https:\/\/test.*)\" frameborder"
     # Regex on "normal" line does not work neither
     #local regex="^oportu.*"
 
@@ -37,7 +37,7 @@ function replaceTextWithFile() {
         #sed -i '' -e '9s/.*/$content/' $originalFile
 
         # Try to escape particular characters in the line to replace
-        line2="\<iframe src=\"https:\/\/foo\.com\/bar\/11d75d1c66667299e4fe35e\" frameborder=0\>\<\/iframe\>"
+        line2="\<iframe src=\"https:\/\/test\.com\/bar\/11d75d1c66667299e4fe35e\" frameborder=0\>\<\/iframe\>"
         #sed -i '' -e '/$line2/r $replacementFile' -e '//d' $originalFile
 
         # Try other syntax
