@@ -22,6 +22,28 @@ function replaceTextWithFile() {
             #https://stackoverflow.com/a/38782644
             # Does not work
             #sed -i '' -E '/$line/r $replacementFile' $originalFile
+
+            #https://stackoverflow.com/a/39467432/1286214
+            #sed: 1: "s/^.*oportu.*$/LOREM IP ...": unescaped newline inside substitute pattern
+            #sed "s/^oportu.*$/$(cat new_content)/" $originalFile
+
+            # Output on stdout file with the line changed the line with: "$(cat new_content)"
+            #sed 's/^oportu.*$/"$(cat new_content)"/' $originalFile
+            # Output on stdout file with the line changed with: r $replacementFile
+            #sed 's/^oportu.*$/r $replacementFile/' $originalFile
+
+            #https://stackoverflow.com/a/39411657/1286214
+            # Error sed: 1: "d}
+                #": extra characters at the end of d command
+            #sed -e '/^oportu.*$/{r new_content' -e 'd}' $originalFile
+
+            # Output on stdout file with the line changed the line with: $(< new_content)
+            #sed 's/^oportu.*$/$(< new_content)/' $originalFile
+
+            #https://stackoverflow.com/a/39413525/1286214
+            # Error: sed: 1: "d}
+                #": extra characters at the end of d command
+            sed -e '/^oportu.*$/{r new_content' -e 'd}' $originalFile
         fi
 
         # Following command changes the 9th line successfully
