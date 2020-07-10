@@ -1,9 +1,9 @@
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Paupertas si malum est, mendicus beatus esse nemo
 
-<iframe src="https://foo.com/bar/11d75d1c627c017299e4fe35e" frameborder=0></iframe>
+<iframe src="https://test.com/bar/11d75d1c627c017299e4fe35e" frameborder=0></iframe>
 
 oportunitatis esse beate vivere. Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum
 
-<iframe src="https://foo.com/bar/11d75d1c66667299e4fe35e" frameborder=0></iframe>
+<iframe src="https://test.com/bar/11d75d1c66667299e4fe35e" frameborder=0></iframe>
 
 vivere. Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum
